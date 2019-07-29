@@ -1,0 +1,214 @@
+@font-face {
+    font-family: 'Dancing Script';
+    src: url("fonts/DancingScript-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: 'Dancing Script';
+    font-weight: bold;
+    src: url("fonts/DancingScript-Bold.otf") format("opentype");
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Dancing Script', cursive;
+}
+body, html {
+	background: #02010a;
+}
+body {
+	padding: 40px 10px;
+}
+img {
+	max-width: 100%;
+	box-shadow: 0 2px 2px #02010a;
+}
+
+.contenido {
+	width: 100%;
+	max-width: 900px;
+	margin: auto;
+}
+header {
+	background: #5b7989;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	animation-name: slideInUp;
+	animation-delay: 0s;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+header > div {
+	text-align: center;
+}
+header > div > h1 {
+	color: white;
+	text-shadow: 2px 2px #02010a;
+	font-size: 2.2rem;
+	font-weight: bold;
+}
+header > div > ul {
+	list-style: none;
+	margin: 10px 0;
+}
+header > div > ul > li {
+	display: inline;
+	margin: 0 5px;
+}
+header > div > ul > li > a {
+	color: white;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+header > div > ul > li.active > a {
+	text-decoration: none;
+}
+
+
+
+
+
+.central-img {
+	padding: 20px 30px;
+	background: #82c3a6;
+	text-align: center;
+}
+
+
+.secondary-img {
+	background: #d5c75f;
+	border: 1px solid #d5c75f;
+	padding: 20px 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.secondary-img > div {
+	text-align: center;
+	margin: 10px 20px;
+}
+.secondary-img > div img {
+	transition: all 0.5s ease;
+}
+.secondary-img > div a {
+	font-size: 1.6rem;
+	color: black;
+	font-weight: bold;
+}
+.secondary-img > div:first-child img:hover {
+	transform: rotateZ(10deg);
+	box-shadow: 2px 2px 2px #82c3a6;
+}
+.secondary-img > div:last-child img:hover {
+	transform: translate(20px, -5px);
+	box-shadow: 2px 2px 2px #82c3a6;
+}
+
+footer {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background: #C6d5c5;
+	padding: 40px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+footer div {
+	text-align: left;
+	margin: 20px 0;
+}
+footer h3 {
+	margin: 10px 0;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+footer p {
+	margin: 5px 0;
+	font-size: 1.2rem;
+}
+footer p a {
+	color: black;
+}
+footer > .social-networks > p {
+	display: flex;
+	align-items: center;
+}
+footer > .social-networks > p > img {
+	box-shadow: none;
+}
+footer > .social-networks > p > a {
+	margin-left: 5px;
+	text-decoration: none;
+	color: black;
+}
+
+.galeria {
+	background: #d5c75f;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.galeria div {
+	margin: 20px 20px;
+}
+.galeria div:first-child img {
+	filter: blur(10px);
+}
+.galeria div:nth-child(even) img {
+	filter: grayscale(100%);
+}
+.galeria div:nth-child(3) img {
+	filter: sepia(90%);
+}
+
+@media screen and (min-width: 900px) {
+	body {
+		padding: 5px 10px;
+	}
+	header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.secondary-img {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	footer {
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-around;
+	}
+	footer div {
+		margin: 0 10px;
+	}
+	.galeria {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.galeria div {
+		max-width: 25%;
+	}
+}
+
+@keyframes slideInUp {
+  0% {
+  	margin-top: 150%;
+  }
+
+  60% {
+  	margin-top: -5%;
+  }
+
+  100% {
+  	margin-top: 0%;
+  }
+}
